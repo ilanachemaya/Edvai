@@ -143,3 +143,6 @@ A continuación, se detallan las medidas DAX y columnas calculadas más importan
 ## 9. Conclusión
 Este proyecto permitió validar las hipótesis planteadas sobre el uso del servicio de bicicletas compartidas, identificando un mayor uso en los fines de semana y durante las estaciones templadas, así como el predominio de suscriptores estudiantiles entre los usuarios más frecuentes.
 
+Para visualizar el informe interactivo de Power BI, hacer clic en el siguiente enlace:
+
+[Ver Informe de Power BI](https://app.powerbi.com/reportEmbed?reportId=5edd622f-a774-4602-a991-2a8c8708f728&autoAuth=true&ctid=7953fa94-9623-4333-8df1-69995c715b20)

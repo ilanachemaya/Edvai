@@ -3,31 +3,69 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Informe de Power BI</title>
+  <title>Escuela de Datos Vivos</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
       background-color: #f4f4f4;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      color: #333;
     }
     iframe {
       border: none;
       width: 100%;
-      max-width: 1140px; /* Ancho máximo del iframe */
-      height: 541.25px; /* Altura del iframe */
+      max-width: 1140px;
+      height: 541.25px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .link-container {
+      margin-top: 20px;
+    }
+    a {
+      text-decoration: none;
+      color: #007bff;
+      font-size: 18px;
+      padding: 10px 20px;
+      background-color: #f0f0f0;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s;
+    }
+    a:hover {
+      background-color: #e0e0e0;
     }
   </style>
 </head>
 <body>
+
+  <h1>Escuela de Datos Vivos</h1>
+
   <iframe 
     title="Informe de Power BI"
     src="https://app.powerbi.com/reportEmbed?reportId=5edd622f-a774-4602-a991-2a8c8708f728&autoAuth=true&ctid=7953fa94-9623-4333-8df1-69995c715b20" 
     allowFullScreen="true">
+  </iframe>
+
+  <div class="link-container">
+    <a href="https://app.powerbi.com/view?r=eyJrIjoiNjA5NDYzZTEtM2UwZC00YTk5LTgxZGEtZDgwZTdmNjk1YjJmIiwidCI6IjY2MzM1YzIzLWY5YWItNDY3Ny05ZGRhLTM2ZGM5ZmJjMDkzNiIsImMiOjR9" target="_blank">
+      Ver informe completo en Power BI
+    </a>
+  </div>
+
+</body>
+</html>
+
   </iframe>
 </body>
 </html>

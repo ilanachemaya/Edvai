@@ -1,6 +1,19 @@
 # Análisis del Sistema de Viajes en Bicicleta “Austin” con Power BI y BigQuery
 ### Por Ilan Ariel Chemaya
 
+## Índice
+1. [Presentación de la Temática](#1-presentación-de-la-temática)
+2. [Breve descripción de la BBDD](#2-breve-descripción-de-la-bbdd)
+3. [ETL Realizado](#3-etl-realizado)
+4. [DER (Diagrama Entidad-Relación)](#4-der-diagrama-entidad-relación)
+5. [Modelo Entidad-Relación (DER) en la Capa Bronze/Raw](#5-modelo-entidad-relación-der-en-la-capa-bronzeraw)
+6. [Plan de Métricas](#6-plan-de-métricas)
+7. [Queries Principales](#7-queries-principales)
+8. [Cálculos DAX Principales](#8-cálculos-dax-principales)
+9. [Conclusión](#9-conclusión)
+
+---
+
 ## 1. Presentación de la Temática
 El presente proyecto tiene como objetivo realizar un análisis exhaustivo del uso del sistema de bicicletas compartidas en una ciudad utilizando herramientas de análisis como Power BI y BigQuery. El análisis se enfoca en identificar patrones de uso, estacionalidad y comportamientos de diferentes tipos de usuarios, con el fin de proporcionar insights clave para la optimización del servicio.
 
@@ -71,8 +84,15 @@ La base de datos está compuesta por dos tablas principales en la capa "bronze",
 
 ---
 
-## 4. DER (Diagrama Entidad-Relación) - Capa Bronze
-A continuación se presentan las estructuras de las tablas principales en la capa "bronze":
+## 4. DER (Diagrama Entidad-Relación)
+A continuación se presenta el modelo entidad-relación (DER) que muestra las relaciones entre las tablas principales del dataset exportado finalmente a Power BI como capa silver.
+
+![DER del Sistema de Bicicletas Compartidas](DER.png)
+
+---
+
+## 5. Modelo Entidad-Relación (DER) en la Capa Bronze/Raw
+No se cuenta con un modelo entidad-relación formal en la capa raw, pero se utilizó la siguiente estructura de tablas en la fase inicial:
 
 ### 1. bikeshare_stations
 - **ID de cada estación:** `station_id`
@@ -90,15 +110,6 @@ A continuación se presentan las estructuras de las tablas principales en la cap
 - **Nombre de estación de fin:** `end_station_name`
 - **Duración:** `duration_minutes`
 - **Otros campos relevantes:** `bike_id`, `bike_type`
-
----
-
-## 5. Modelo Entidad-Relación (DER) en la Capa Bronze/Raw
-No se cuenta con un modelo entidad-relación formal en la capa raw, pero se utilizó la siguiente estructura de tablas en la fase inicial:
-
-### Estructura de Tablas en la Capa Raw
-- **fact_trips_raw:** Registros de viajes crudos, con campos como las estaciones de inicio y fin, duraciones, y tipo de usuario.
-- **dim_stations_raw:** Información básica de las estaciones de bicicletas.
 
 ---
 
@@ -145,4 +156,9 @@ Este proyecto permitió validar las hipótesis planteadas sobre el uso del servi
 
 Para visualizar el informe interactivo de Power BI, hacer clic en el siguiente enlace:
 
-[Ver Informe de Power BI](https://app.powerbi.com/reportEmbed?reportId=5edd622f-a774-4602-a991-2a8c8708f728&autoAuth=true&ctid=7953fa94-9623-4333-8df1-69995c715b20)
+[Ver Informe de Power BI](https://app.powerbi.com/view?r=eyJrIjoiNjc2NzUyZTItMDNmNi00NmYyLTk0NzItNTRkZDhjZDYxODJjIiwidCI6Ijc5NTNmYTk0LTk2MjMtNDMzMy04ZGYxLTY5OTk1YzcxNWIyMCIsImMiOjR9&pageName=e06befc058b5806e6581)
+
+Para más información sobre el proyecto o cualquier consulta, puedes contactarme a través de mi perfil de LinkedIn:
+
+[LinkedIn - Ilan Ariel Chemaya](https://www.linkedin.com/in/ilan-ariel-chemaya-782330313/)
+

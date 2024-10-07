@@ -30,6 +30,9 @@ El presente proyecto tiene como objetivo realizar un análisis exhaustivo del us
 2. **Popularidad en estaciones templadas:** Se espera que el servicio sea más popular durante el otoño y la primavera debido al clima favorable.
 3. **Suscriptores estudiantiles como principales usuarios:** Se prevé que los suscriptores estudiantiles son quienes hacen mayor uso del sistema de bicicletas compartidas.
 
+
+[Volver al inicio](#índice)
+
 ---
 
 ## 2. Breve descripción de la BBDD
@@ -55,6 +58,9 @@ La base de datos está compuesta por dos tablas principales en la capa "bronze",
      - `start_station_id`: ID de la estación donde comenzó el viaje.
      - `end_station_id`: ID de la estación donde terminó el viaje.
      - `duration_minutes`: Duración del viaje en minutos.
+
+
+[Volver al inicio](#índice)
 
 ---
 
@@ -82,12 +88,18 @@ La base de datos está compuesta por dos tablas principales en la capa "bronze",
 - **Número total de estaciones:** Métrica que muestra el total de estaciones activas en el sistema.
 - **Viajes por estación:** Relación del promedio de viajes realizados desde cada estación, para identificar patrones de mayor o menor uso.
 
+
+[Volver al inicio](#índice)
+
 ---
 
 ## 4. DER (Diagrama Entidad-Relación)
 A continuación se presenta el modelo entidad-relación (DER) que muestra las relaciones entre las tablas principales del dataset exportado finalmente a Power BI como capa silver.
 
 ![DER del Sistema de Bicicletas Compartidas](DER.png)
+
+
+[Volver al inicio](#índice)
 
 ---
 
@@ -111,12 +123,18 @@ No se cuenta con un modelo entidad-relación formal en la capa raw, pero se util
 - **Duración:** `duration_minutes`
 - **Otros campos relevantes:** `bike_id`, `bike_type`
 
+
+[Volver al inicio](#índice)
+
 ---
 
 ## 6. Plan de Métricas
 Se puede acceder al plan completo de métricas y KPI a través del siguiente enlace al archivo Excel, donde se detalla cómo cada métrica fue definida y calculada:
 
 [Plan de Métricas en Excel.xlsx](Austin%20Bikeshare%20Métricas.xlsx)
+
+
+[Volver al inicio](#índice)
 
 ---
 
@@ -131,6 +149,9 @@ Se presentan, a modo de muestra, las consultas principales que se llevaron a cab
 
 ### Creación de columnas `month` y `year`:
 ![Creación de columnas month e year](Query%203.png)
+
+
+[Volver al inicio](#índice)
 
 ---
 
@@ -148,7 +169,10 @@ A continuación, se detallan las medidas DAX y columnas calculadas más importan
 - **Relación entre cantidad de viajes y estaciones:**
   ```DAX
   Avg Trips per Station = AVERAGEX( VALUES(dim_stations[station_id]), CALCULATE(COUNT(fact_trips[trip_id])))
+
   
+[Volver al inicio](#índice)
+
 ---
 
 ## 9. Conclusión
@@ -161,4 +185,7 @@ Para visualizar el informe interactivo de Power BI, hacer clic en el siguiente e
 Para más información sobre el proyecto o cualquier consulta, puedes contactarme a través de mi perfil de LinkedIn:
 
 [LinkedIn - Ilan Ariel Chemaya](https://www.linkedin.com/in/ilan-ariel-chemaya-782330313/)
+
+
+[Volver al inicio](#índice)
 
